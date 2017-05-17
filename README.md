@@ -1,6 +1,7 @@
 # now-ui
 
 > Vue components for now-ui 
+Work in progress
 
 ## Build Setup
 
