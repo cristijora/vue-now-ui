@@ -1,6 +1,6 @@
 # now-ui
 
-> A Vue.js project
+> Vue components for now-ui 
 
 ## Build Setup
 
