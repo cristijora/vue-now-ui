@@ -40,13 +40,6 @@
     margin-top: 60px;
   }
 </style>
-
-<style>
-  @import "/static/css/bootstrap.min.css";
-  @import "/static/css/demo.css";
-  @import "/static/css/now-ui-kit.css";
-</style>
-
 <style lang="scss" src="@sass/now-ui-kit.scss">
 </style>
 
