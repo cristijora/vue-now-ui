@@ -10,10 +10,10 @@
         </button>
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="navigation"
-           data-nav-image="../assets/img/blurred-image-1.jpg">
+           data-nav-image="static/img/blurred-image-1.jpg">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Back to Kit</a>
+            <a class="nav-link" href="https://github.com/cristijora/vue-now-ui">Back to Kit</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/cristijora/vue-now-ui/issues">Have an issue?</a>
