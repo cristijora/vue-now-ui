@@ -1,7 +1,7 @@
 <template>
-  <div class="checkbox">
-    <input id="checkbox2" type="checkbox" checked="" :disabled="disabled" v-model="model">
-    <label for="checkbox2">
+  <div class="n-checkbox checkbox" :class="checkboxType">
+    <input :id="cbId" type="checkbox" :checked="model===true" :disabled="disabled" v-model="model">
+    <label :for="cbId">
       <slot></slot>
     </label>
   </div>
@@ -15,7 +15,16 @@
     props: {
       label: String,
       checked: [Array, Boolean],
-      disabled: [Boolean, String]
+      disabled: [Boolean, String],
+      type: {
+        type: String,
+        default: 'default'
+      }
+    },
+    data() {
+      return {
+        cbId: ''
+      }
     },
     computed: {
       model: {
@@ -25,7 +34,15 @@
         set(check) {
           this.$emit('change', check)
         }
+      },
+      checkboxType() {
+        if (this.type) {
+          return `checkbox-${this.type}`
+        }
       }
+    },
+    created() {
+      this.cbId = Math.random().toString(16).slice(2)
     }
   }
 </script>

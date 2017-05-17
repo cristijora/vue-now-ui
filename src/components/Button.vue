@@ -19,7 +19,7 @@
       iconMini: Boolean
     },
     render(h, {data, props, children}) {
-      let staticClass = `btn`
+      let staticClass = `n-button btn`
       const boolClasses = propsToClasses('btn', props)
       staticClass += ` ${boolClasses}`
       data.staticClass = data.staticClass

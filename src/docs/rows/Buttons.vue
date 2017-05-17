@@ -99,14 +99,7 @@
   </div>
 </template>
 <script>
-  import NButton from './../../components/Button'
-  import DemoBlock from './../helpers/DemoBlock.vue'
-  export default{
-    components: {
-      NButton,
-      DemoBlock
-    }
-  }
+  export default{}
 </script>
 <style>
 </style>
