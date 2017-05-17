@@ -15,10 +15,11 @@
       },
       simple: Boolean,
       round: Boolean,
-      icon: Boolean
+      icon: Boolean,
+      iconMini: Boolean
     },
     render(h, {data, props, children}) {
-      let staticClass = `btn btn-${props.type}`
+      let staticClass = `btn`
       const boolClasses = propsToClasses('btn', props)
       staticClass += ` ${boolClasses}`
       data.staticClass = data.staticClass

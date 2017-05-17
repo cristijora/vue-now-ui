@@ -1,21 +1,25 @@
 <template>
   <div id="app">
-    <n-button type="primary">Test</n-button>
-    <n-checkbox v-model="cbValue">Hello</n-checkbox>
+    <nav-bar></nav-bar>
+    <div class="wrapper">
+      <top-navbar></top-navbar>
+      <main-content></main-content>
+    </div>
   </div>
 </template>
 
 <script>
-  import NButton from './components/Button'
-  import NCheckbox from './components/Checkbox.vue'
   import NToggle from './components/Toggle.vue'
-
+  import MainContent from './docs/MainContent.vue'
+  import NavBar from './docs/NavBar.vue'
+  import TopNavbar from './docs/TopNavBar.vue'
   export default {
     name: 'app',
     components: {
-      NButton,
-      NCheckbox,
-      NToggle
+      NToggle,
+      MainContent,
+      NavBar,
+      TopNavbar
     },
     data() {
       return {
@@ -37,6 +41,12 @@
   }
 </style>
 
-<style lang="scss" src="@sass/now-ui-kit/_nucleo-outline.scss">
+<style>
+  @import "/static/css/bootstrap.min.css";
+  @import "/static/css/demo.css";
+  @import "/static/css/now-ui-kit.css";
+</style>
+
+<style lang="scss" src="@sass/now-ui-kit.scss">
 </style>
 
