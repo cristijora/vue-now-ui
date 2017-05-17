@@ -1,6 +1,6 @@
 <template>
   <div class="page-header page-header-small clear-filter" filter-color="orange">
-    <div class="page-header-image" data-parallax="true" style="background-image: url('/static/img/header.jpg');">
+    <div class="page-header-image" data-parallax="true" style="background-image: url('static/img/header.jpg');">
     </div>
     <div class="container">
       <div class="content-center">
