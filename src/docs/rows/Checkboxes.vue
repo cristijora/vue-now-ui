@@ -42,8 +42,43 @@ export default{
       </div>
     </demo-block>
 
+
     <p>
     </p>
+
+    <h2> Toggle buttons </h2>
+    <legend></legend>
+    <demo-block>
+      <div class="source" slot="source">
+        <p>
+          V-model ready toggle buttons
+        </p>
+        <div class="row">
+          <n-toggle v-model="simpleToggle"></n-toggle>
+          <n-toggle onText="ON" offText="OFF" v-model="textToggle"></n-toggle>
+        </div>
+      </div>
+      <div class="highlight" slot="highlight">
+        <pre>
+          <code class="language-markup">
+            <script type="prism-html-markup">
+<n-toggle v-model="simpleToggle"></n-toggle>
+<n-toggle onText="ON" offText="OFF" v-model="textToggle"></n-toggle>
+            </script>
+          </code>
+          <code class="language-javascript">
+export default{
+    data() {
+      return {
+        simpleToggle: true,
+        textToggle: true
+      }
+    }
+  }</code>
+        </pre>
+      </div>
+    </demo-block>
+
   </div>
   <!-- end row -->
 </template>
@@ -55,13 +90,15 @@ export default{
         checked: true,
         disabled: true,
         danger: true,
-        primary: true
+        primary: true,
+        simpleToggle: true,
+        textToggle: true
       }
     }
   }
 </script>
 <style>
-  .checkbox{
-    margin-right:10px;
+  .checkbox {
+    margin-right: 10px;
   }
 </style>

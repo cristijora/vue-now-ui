@@ -2,7 +2,8 @@
   <nav class="navbar navbar-toggleable-md fixed-top bg-primary navbar-transparent" color-on-scroll="500">
     <div class="container">
       <div class="navbar-translate">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation"
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navigation"
                 aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-bar bar1"></span>
           <span class="navbar-toggler-bar bar2"></span>
@@ -24,7 +25,7 @@
   </nav>
 </template>
 <script>
-    export default{}
+  export default{}
 </script>
 <style>
 </style>
