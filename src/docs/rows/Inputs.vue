@@ -10,16 +10,26 @@
         </p>
         <div class="row">
           <div class="col-sm-4">
-            <n-input v-model="simple">
-            </n-input>
+            <n-input v-model="simple" placeholder="Simple" no-border></n-input>
           </div>
           <div class="col-sm-4">
-            <n-input v-model="icon" has-icon>
+            <n-input v-model="border" placeholder="Border"></n-input>
+          </div>
+          <div class="col-sm-4">
+            <n-input v-model="success" no-border class="has-success"></n-input>
+          </div>
+          <div class="col-sm-4">
+            <n-input v-model="danger" class="has-danger"></n-input>
+          </div>
+          <div class="col-sm-4">
+            <n-input v-model="iconRight" placeholder="Right Icon" has-icon no-border>
               <i class="fa fa-user-circle"></i>
             </n-input>
           </div>
+
           <div class="col-sm-4">
-            <n-input v-model="danger" class="has-danger">
+            <n-input v-model="iconLeft" placeholder="Left Icon" has-icon no-border iconAlign="left">
+              <i class="fa fa-user-circle"></i>
             </n-input>
           </div>
 
@@ -29,28 +39,29 @@
         <pre>
           <code class="language-markup">
             <script type="prism-html-markup">
-<div class="col-sm-4">
-  <n-input v-model="simple">
-  </n-input>
-</div>
-<div class="col-sm-4">
-  <n-input v-model="icon" has-icon>
-    <i class="fa fa-user-circle"></i>
-  </n-input>
-</div>
-<div class="col-sm-4">
-  <n-input v-model="danger" class="has-danger">
-  </n-input>
-</div>
+<n-input v-model="simple" placeholder="Simple" no-border></n-input>
+<n-input v-model="border" placeholder="Border"></n-input>
+<n-input v-model="success" no-border class="has-success"></n-input>
+
+<n-input v-model="danger" class="has-danger"></n-input>
+<n-input v-model="iconRight" placeholder="Right Icon" has-icon no-border>
+  <i class="fa fa-user-circle"></i>
+</n-input>
+<n-input v-model="iconLeft" placeholder="Left Icon" has-icon no-border iconAlign="left">
+  <i class="fa fa-user-circle"></i>
+</n-input>
             </script>
           </code>
           <code class="language-javascript">
 export default{
     data() {
       return {
-        simple: 'Simple',
-        icon: 'Input with icon',
-        danger: 'Has error'
+        simple: '',
+        border: '',
+        iconRight: '',
+        iconLeft: '',
+        success: 'Success',
+        danger: 'Error input'
       }
     }
 }
@@ -68,9 +79,12 @@ export default{
   export default{
     data() {
       return {
-        simple: 'Simple',
-        icon: 'Input with icon',
-        danger: 'Has error'
+        simple: '',
+        border: '',
+        iconRight: '',
+        iconLeft: '',
+        success: 'Success',
+        danger: 'Error input'
       }
     }
   }

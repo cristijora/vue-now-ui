@@ -10,8 +10,8 @@
           <n-button>Default</n-button>
           <n-button type="primary">Primary</n-button>
           <n-button type="info">Info</n-button>
-          <n-button type="success">Success</n-button>
           <br>
+          <n-button type="success">Success</n-button>
           <n-button type="warning">Warning</n-button>
           <n-button type="danger">Danger</n-button>
           <n-button type="neutral">Neutral</n-button>

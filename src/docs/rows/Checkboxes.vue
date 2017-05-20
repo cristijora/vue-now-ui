@@ -13,7 +13,7 @@
           <n-checkbox v-model="checked">Checked</n-checkbox>
           <n-checkbox v-model="primary" type="success">Success</n-checkbox>
           <n-checkbox v-model="danger" type="danger">Danger</n-checkbox>
-          <n-checkbox v-model="disabled" disabled>Checked</n-checkbox>
+          <n-checkbox v-model="disabled" disabled>Checked and disabled</n-checkbox>
         </div>
       </div>
       <div class="highlight" slot="highlight">
@@ -83,8 +83,6 @@ export default{
         </pre>
       </div>
     </demo-block>
-
-
 
     <h2> Toggle buttons </h2>
     <legend></legend>
