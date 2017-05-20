@@ -1,3 +1,4 @@
+@import "bootstrap/input";
 @import "variables";
 @import "mixins";
 @include form-control-placeholder($medium-gray, 1);
