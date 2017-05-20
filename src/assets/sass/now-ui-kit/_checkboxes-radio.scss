@@ -1,8 +1,12 @@
 @import "variables";
 @import "mixins";
+
 .checkbox,
 .radio {
   margin-bottom: 12px;
+  ::after,::before{
+    box-sizing: border-box;
+  }
 }
 
 .checkbox label,
