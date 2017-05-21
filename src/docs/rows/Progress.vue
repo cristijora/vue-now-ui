@@ -1,32 +1,33 @@
 <template>
   <!-- checkbox row -->
-  <div class="tim-row" id="textarea-row">
-    <h2> Textarea </h2>
+  <div class="tim-row" id="progress-row">
+    <h2> Progress bars </h2>
     <legend></legend>
     <demo-block>
       <div class="source" slot="source">
         <p>
-          The textarea has a new style, so it looks similar to all other inputs.
+          Customizable progress bars via props. 6 types of progress bars with different colors to suit your application
         </p>
-        <div class="row">
-          <textarea class="form-control" placeholder="Here can be your nice text" rows="5"></textarea>
-        </div>
+
+        <n-progress :percentage="20" >Default</n-progress>
+        <n-progress :percentage="30" status="primary">Primary</n-progress>
+        <n-progress :percentage="40" status="info">Info</n-progress>
+        <n-progress :percentage="50" status="success">Success</n-progress>
+        <n-progress :percentage="60" status="danger" :show-percentage="false">Danger no percentage</n-progress>
+        <n-progress :percentage="100" status="warning" :height="3">Warning with custom height</n-progress>
+
       </div>
       <div class="highlight" slot="highlight">
         <pre>
           <code class="language-markup">
             <script type="prism-html-markup">
-<textarea class="form-control" v-model="textarea" placeholder="Here can be your nice text" rows="5" ></textarea>
+<n-progress :percentage="20" >Default</n-progress>
+<n-progress :percentage="30" status="primary">Primary</n-progress>
+<n-progress :percentage="40" status="info">Info</n-progress>
+<n-progress :percentage="50" status="success">Success</n-progress>
+<n-progress :percentage="60" status="danger" :show-percentage="false">Danger no percentage</n-progress>
+<n-progress :percentage="100" status="warning" :height="3">Warning with custom height</n-progress>
             </script>
-          </code>
-          <code class="language-javascript">
-export default{
-    data() {
-      return {
-        textarea: ''
-      }
-    }
-}
           </code>
         </pre>
       </div>
@@ -35,16 +36,5 @@ export default{
   <!-- end row -->
 </template>
 <script>
-  export default{
-    data() {
-      return {
-        textarea: ''
-      }
-    }
-  }
+  export default{}
 </script>
-<style>
-  .checkbox {
-    margin-right: 10px;
-  }
-</style>

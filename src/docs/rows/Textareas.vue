@@ -16,8 +16,17 @@
         <pre>
           <code class="language-markup">
             <script type="prism-html-markup">
-<textarea class="form-control" placeholder="Here can be your nice text" rows="5"></textarea>
+<textarea class="form-control" v-model="textarea" placeholder="Here can be your nice text" rows="5" ></textarea>
             </script>
+          </code>
+          <code class="language-javascript">
+export default{
+    data() {
+      return {
+        textarea: ''
+      }
+    }
+}
           </code>
         </pre>
       </div>
@@ -29,15 +38,7 @@
   export default{
     data() {
       return {
-        unchecked: false,
-        checked: true,
-        disabled: true,
-        danger: true,
-        primary: true,
-        simpleRadio: '1',
-        disabledRadio: '2',
-        simpleToggle: false,
-        textToggle: true
+        textarea: ''
       }
     }
   }

@@ -13,6 +13,10 @@
       size: {
         type: String
       },
+      tag: {
+        type: String,
+        default: 'button'
+      },
       simple: Boolean,
       round: Boolean,
       icon: Boolean,
@@ -25,7 +29,7 @@
       data.staticClass = data.staticClass
         ? `${data.staticClass} ${staticClass}`
         : staticClass
-      return h('button', {
+      return h(props.tag, {
         ...data
       }, children)
     }
