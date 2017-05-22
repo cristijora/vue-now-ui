@@ -11,8 +11,8 @@
         <div class="row">
           <n-checkbox v-model="unchecked">Unchecked</n-checkbox>
           <n-checkbox v-model="checked">Checked</n-checkbox>
-          <n-checkbox v-model="primary" type="success">Success</n-checkbox>
-          <n-checkbox v-model="danger" type="danger">Danger</n-checkbox>
+          <n-checkbox v-model="green" color="green">Green</n-checkbox>
+          <n-checkbox v-model="red" color="red">Red</n-checkbox>
           <n-checkbox v-model="disabled" disabled>Checked and disabled</n-checkbox>
         </div>
       </div>
@@ -22,8 +22,9 @@
             <script type="prism-html-markup">
 <n-checkbox v-model="unchecked">Unchecked</n-checkbox>
 <n-checkbox v-model="checked">Checked</n-checkbox>
-<n-checkbox v-model="danger" type="danger">Danger</n-checkbox>
-<n-checkbox v-model="disabled" disabled>Checked</n-checkbox>
+<n-checkbox v-model="green" color="green">Green</n-checkbox>
+<n-checkbox v-model="red" color="red">Red</n-checkbox>
+<n-checkbox v-model="disabled" disabled>Checked and disabled</n-checkbox>
             </script>
           </code>
           <code class="language-javascript">
@@ -33,8 +34,8 @@ export default{
         unchecked: false,
         checked: true,
         disabled: true,
-        danger: true,
-        primary: true
+        red: true,
+        green: true
       }
     }
   }</code>
@@ -127,8 +128,8 @@ export default{
         unchecked: false,
         checked: true,
         disabled: true,
-        danger: true,
-        primary: true,
+        red: true,
+        green: true,
         simpleRadio: '1',
         disabledRadio: '2',
         simpleToggle: false,

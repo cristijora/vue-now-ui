@@ -4,9 +4,9 @@
   export default {
     functional: true,
     props: {
-      type: {
+      color: {
         type: String,
-        default: 'default'
+        default: 'gray'
       },
       tag: {
         type: String,

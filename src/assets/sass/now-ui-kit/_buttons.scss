@@ -83,11 +83,11 @@
 
 // Apply the mixin to the buttons
 //.btn-default { @include btn-styles($default-color, $default-states-color); }
-.btn-primary { @include btn-styles($primary-color, $primary-states-color); }
-.btn-success { @include btn-styles($success-color, $success-states-color); }
-.btn-info    { @include btn-styles($info-color, $info-states-color); }
-.btn-warning { @include btn-styles($warning-color, $warning-states-color); }
-.btn-danger  { @include btn-styles($danger-color, $danger-states-color); }
+.btn-orange { @include btn-styles($primary-color, $primary-states-color); }
+.btn-green { @include btn-styles($success-color, $success-states-color); }
+.btn-blue    { @include btn-styles($info-color, $info-states-color); }
+.btn-yellow { @include btn-styles($warning-color, $warning-states-color); }
+.btn-red  { @include btn-styles($danger-color, $danger-states-color); }
 .btn-neutral { @include btn-styles($white-color, $white-color); }
 
 .btn{

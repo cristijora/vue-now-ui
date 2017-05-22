@@ -10,11 +10,11 @@
         </p>
 
         <n-progress :percentage="20" >Default</n-progress>
-        <n-progress :percentage="30" status="primary">Primary</n-progress>
-        <n-progress :percentage="40" status="info">Info</n-progress>
-        <n-progress :percentage="50" status="success">Success</n-progress>
-        <n-progress :percentage="60" status="danger" :show-percentage="false">Danger no percentage</n-progress>
-        <n-progress :percentage="100" status="warning" :height="3">Warning with custom height</n-progress>
+        <n-progress :percentage="30" color="orange">Orange</n-progress>
+        <n-progress :percentage="40" color="blue">Blue</n-progress>
+        <n-progress :percentage="50" color="green">Green</n-progress>
+        <n-progress :percentage="60" color="red" :show-percentage="false">Red no percentage</n-progress>
+        <n-progress :percentage="100" color="yellow" :height="3">Yellow with custom height</n-progress>
 
       </div>
       <div class="highlight" slot="highlight">
@@ -22,11 +22,11 @@
           <code class="language-markup">
             <script type="prism-html-markup">
 <n-progress :percentage="20" >Default</n-progress>
-<n-progress :percentage="30" status="primary">Primary</n-progress>
-<n-progress :percentage="40" status="info">Info</n-progress>
-<n-progress :percentage="50" status="success">Success</n-progress>
-<n-progress :percentage="60" status="danger" :show-percentage="false">Danger no percentage</n-progress>
-<n-progress :percentage="100" status="warning" :height="3">Warning with custom height</n-progress>
+<n-progress :percentage="30" color="orange">Orange</n-progress>
+<n-progress :percentage="40" color="blue">Blue</n-progress>
+<n-progress :percentage="50" color="green">Green</n-progress>
+<n-progress :percentage="60" color="red" :show-percentage="false">Red no percentage</n-progress>
+<n-progress :percentage="100" color="yellow" :height="3">Yellow with custom height</n-progress>
             </script>
           </code>
         </pre>

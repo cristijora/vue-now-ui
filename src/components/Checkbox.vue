@@ -16,9 +16,9 @@
       label: String,
       checked: [Array, Boolean],
       disabled: [Boolean, String],
-      type: {
+      color: {
         type: String,
-        default: 'default'
+        default: 'neutral'
       }
     },
     data() {
@@ -36,8 +36,8 @@
         }
       },
       checkboxType() {
-        if (this.type) {
-          return `checkbox-${this.type}`
+        if (this.color) {
+          return `checkbox-${this.color}`
         }
       }
     },

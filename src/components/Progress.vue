@@ -17,9 +17,9 @@
   export default{
     props: {
       percentage: Number,
-      status: {
+      color: {
         type: String,
-        default: 'default'
+        default: 'gray'
       },
       showPercentage: {
         type: Boolean,
@@ -42,7 +42,7 @@
         }
       },
       progressClass() {
-        return `progress-${this.status}`
+        return `progress-${this.color}`
       },
       progressPercentage() {
         return `${this.percentage}%`
