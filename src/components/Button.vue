@@ -29,9 +29,7 @@
       data.staticClass = data.staticClass
         ? `${data.staticClass} ${staticClass}`
         : staticClass
-      return h(props.tag, {
-        ...data
-      }, children)
+      return h(props.tag, data, children)
     }
   }
 </script>
