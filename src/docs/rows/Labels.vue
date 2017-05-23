@@ -8,7 +8,6 @@
         <p>
           Colored labels with the html tag you want
         </p>
-        <n-pagination :total="10" v-model="currentPage"></n-pagination>
         <n-label color="gray">Default</n-label>
         <n-label color="orange" tag="div">Orange</n-label>
         <n-label color="green">Green</n-label>
