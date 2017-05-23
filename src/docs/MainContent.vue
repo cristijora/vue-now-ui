@@ -24,6 +24,9 @@
                 <li>
                   <a href="#labels-row">Labels</a>
                 </li>
+                <li>
+                  <a href="#paginaton-row">Pagination</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -45,6 +48,9 @@
             </div>
             <div class="tim-container">
               <labels></labels>
+            </div>
+            <div class="tim-container">
+              <paginations></paginations>
             </div>
           </div>
         </div>
@@ -70,6 +76,7 @@
   import Textareas from './rows/Textareas.vue'
   import ProgressBars from './rows/Progress.vue'
   import Labels from './rows/Labels.vue'
+  import Paginations from './rows/Paginations.vue'
   export default{
     components: {
       Buttons,
@@ -77,7 +84,8 @@
       Inputs,
       Textareas,
       ProgressBars,
-      Labels
+      Labels,
+      Paginations
     }
   }
 </script>

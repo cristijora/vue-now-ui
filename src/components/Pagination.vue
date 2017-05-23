@@ -5,7 +5,7 @@
         <span aria-hidden="true"><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
       </a>
     </li>
-    <li class="page-item" :class="{active: currentActivePage === item}" v-for="item in range(minCount, maxCount)">
+    <li class="page-item" :class="{active: value === item}" v-for="item in range(minPage, maxPage)">
       <a class="page-link" @click="changePage(item)">{{item}}</a>
     </li>
     <li class="page-item">
@@ -13,69 +13,83 @@
         <span aria-hidden="true"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
       </a>
     </li>
+    <!--<div class="form-group">
+      <input type="number" value="" placeholder="Regular" class="form-control rounded-input" />
+    </div>-->
   </ul>
 </template>
 <script>
   export default{
     props: {
-      type: {
+      color: {
         type: String,
-        default: 'primary'
+        default: 'gray'
       },
       total: {
         type: Number,
         default: 5
+      },
+      value: {
+        type: Number,
+        default: 1
       }
     },
     computed: {
       paginationClass() {
-        return `pagination-${this.type}`
-      },
-      minCount() {
-        const minPage = this.maxCount - this.pagesToDisplay
-        if (minPage > 1) {
-          return minPage
-        }
-        return 1
-      },
-      maxCount() {
-        const maxPage = this.currentActivePage + this.pagesToDisplay
-        if (maxPage < this.total) {
-          const remainder = this.currentActivePage % this.pagesToDisplay
-          if (remainder === 0) {
-            return maxPage
-          }
-          return this.currentActivePage + (this.pagesToDisplay - remainder + 1)
-        }
-        return this.total
+        return `pagination-${this.color}`
       }
     },
     data() {
       return {
-        currentActivePage: 1,
-        pagesToDisplay: 5
+        pagesToDisplay: 5,
+        minPage: 1,
+        maxPage: 5
       }
     },
     methods: {
       range(min, max) {
         let arr = []
-        for (var i = min; i < max; i++) {
+        for (let i = min; i <= max; i++) {
           arr.push(i)
         }
         return arr
       },
       changePage(item) {
-        this.currentActivePage = item
+        this.$emit('input', item)
       },
       nextPage() {
-        if (this.currentActivePage < this.total) {
-          this.currentActivePage++
+        if (this.value < this.total) {
+          this.$emit('input', this.value + 1)
         }
       },
       prevPage() {
-        if (this.currentActivePage > 1) {
-          this.currentActivePage--
+        if (this.value > 1) {
+          this.$emit('input', this.value - 1)
         }
+      },
+      handlePageChange() {
+        if (this.value >= this.pagesToDisplay) {
+          const pagesToAdd = Math.floor(this.pagesToDisplay / 2)
+          this.minPage = this.value - pagesToAdd
+          const newMaxPage = pagesToAdd + this.value
+          if (newMaxPage < this.total) {
+            this.maxPage = newMaxPage
+          } else {
+            this.maxPage = this.total
+            this.minPage = this.total - this.pagesToDisplay + 1
+          }
+        } else {
+          this.minPage = 1
+          this.maxPage = this.pagesToDisplay
+        }
+      }
+    },
+    created() {
+      this.handlePageChange()
+    },
+    watch: {
+      value: function(newVal, oldVal) {
+        this.handlePageChange()
       }
     }
   }

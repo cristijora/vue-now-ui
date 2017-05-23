@@ -35,5 +35,11 @@
   <!-- end row -->
 </template>
 <script>
-  export default{}
+  export default{
+    data() {
+      return {
+        currentPage: 6
+      }
+    }
+  }
 </script>

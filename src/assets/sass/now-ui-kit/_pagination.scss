@@ -1,5 +1,17 @@
 @import "variables";
 @import "mixins";
+@mixin pagination-color($name,$color){
+  &.pagination-#{$name}{
+    .page-item.active > .page-link{
+      &,
+      &:focus,
+      &:hover{
+        background-color: $color;
+        border-color: $color;
+      }
+    }
+  }
+}
 .pagination{
     .page-item .page-link{
         border: 0;
@@ -58,60 +70,12 @@
     }
 
     // Colors
-    &.pagination-info{
-        .page-item.active > .page-link{
-            &,
-            &:focus,
-            &:hover{
-                background-color: $brand-info;
-                border-color: $brand-info;
-            }
-        }
-    }
-
-    &.pagination-success{
-        .page-item.active > .page-link{
-            &,
-            &:focus,
-            &:hover{
-                background-color: $brand-success;
-                border-color: $brand-success;
-            }
-        }
-    }
-
-    &.pagination-primary{
-        .page-item.active > .page-link{
-            &,
-            &:focus,
-            &:hover{
-                background-color: $brand-primary;
-                border-color: $brand-primary;
-            }
-        }
-    }
-
-    &.pagination-warning{
-        .page-item.active > .page-link{
-            &,
-            &:focus,
-            &:hover{
-                background-color: $brand-warning;
-                border-color: $brand-warning;
-            }
-        }
-    }
-
-    &.pagination-danger{
-        .page-item.active > .page-link{
-            &,
-            &:focus,
-            &:hover{
-                background-color: $brand-danger;
-                border-color: $brand-danger;
-            }
-        }
-    }
+    @include pagination-color(blue, $brand-info);
+    @include pagination-color(green, $brand-success);
+    @include pagination-color(orange, $brand-primary);
+    @include pagination-color(blue, $brand-info);
+    @include pagination-color(yellow, $brand-warning);
+    @include pagination-color(red, $brand-danger);
 
     &.pagination-neutral{
         .page-item > .page-link{
