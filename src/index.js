@@ -6,6 +6,10 @@ import NInput from './components/Input.vue'
 import NProgress from './components/Progress.vue'
 import NLabel from './components/Label.vue'
 import NPagination from './components/Pagination.vue'
+import NSlider from './components/Slider.vue'
+import NDropdown from './components/Dropdown/Dropdown.vue'
+import NDropdownItem from './components/Dropdown/DropdownItem.vue'
+import NDropDownMenu from './components/Dropdown/DropdownMenu.vue'
 
 const NowUI = {
   install(Vue) {
@@ -17,6 +21,10 @@ const NowUI = {
     Vue.component('n-progress', NProgress)
     Vue.component('n-label', NLabel)
     Vue.component('n-pagination', NPagination)
+    Vue.component('n-slider', NSlider)
+    Vue.component('n-dropdown', NDropdown)
+    Vue.component('n-dropdown-item', NDropdownItem)
+    Vue.component('n-dropdown-menu', NDropDownMenu)
   }
 }
 
