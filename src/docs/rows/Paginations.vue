@@ -3,6 +3,11 @@
   <div class="tim-row" id="pagination-row">
     <h2> Pagination </h2>
     <legend></legend>
+    <n-navbar>
+      <n-menu-item>Link 1</n-menu-item>
+      <n-menu-item>Test 2</n-menu-item>
+      <n-menu-item>Test 3</n-menu-item>
+    </n-navbar>
     <demo-block>
       <div class="source" slot="source">
         <p>

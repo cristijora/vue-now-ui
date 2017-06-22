@@ -1,4 +1,4 @@
-import NButton from './components/Button.vue'
+import NButton from './components/Button.js'
 import NCheckbox from './components/Checkbox.vue'
 import NRadio from './components/Radio.vue'
 import NToggle from './components/Toggle.vue'
@@ -10,6 +10,8 @@ import NSlider from './components/Slider.vue'
 import NDropdown from './components/Dropdown/Dropdown.vue'
 import NDropdownItem from './components/Dropdown/DropdownItem.vue'
 import NDropDownMenu from './components/Dropdown/DropdownMenu.vue'
+import NNavbar from './components/Navbar/Navbar'
+import NNavMenuItem from './components/Navbar/NavMenuItem'
 
 const NowUI = {
   install(Vue) {
@@ -25,6 +27,8 @@ const NowUI = {
     Vue.component('n-dropdown', NDropdown)
     Vue.component('n-dropdown-item', NDropdownItem)
     Vue.component('n-dropdown-menu', NDropDownMenu)
+    Vue.component('n-navbar', NNavbar)
+    Vue.component('n-menu-item', NNavMenuItem)
   }
 }
 

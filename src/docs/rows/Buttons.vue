@@ -14,7 +14,7 @@
           <n-button color="green">Green</n-button>
           <n-button color="yellow">Yellow</n-button>
           <n-button color="red">Red</n-button>
-          <n-button color="neutral">Neutral</n-button>
+          <n-button color="neutral" tag="div">Neutral</n-button>
         </p>
       </div>
       <div class="highlight" slot="highlight">
