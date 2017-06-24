@@ -1,5 +1,5 @@
 <template>
-  <n-navbar class="navbar-toggleable-md " :class="[{'navbar-transparent':isHome && isTransparent},{'fixed-top':isHome}]"
+  <n-navbar :class="[{'fixed-top':isHome},{'navbar-transparent':isHome && isTransparent}]"
             type="primary"
             ref="header"
             :align-right="true">
@@ -7,7 +7,7 @@
       Vue Now Ui
     </router-link>
     <router-link :to="`/${ lang }/component`" class="nav-link">
-      <i class="now-ui-icons files_paper"></i>{{ langConfig.components }}
+      <i class="now-ui-icons files_paper"></i>Components
     </router-link>
   </n-navbar>
 </template>
@@ -18,7 +18,7 @@
     data() {
       return {
         active: '',
-        isHome: false,
+        isHome: true,
         isTransparent: true,
         headerStyle: {}
       }
@@ -45,9 +45,6 @@
         localStorage.setItem('ELEMENT_LANGUAGE', targetLang)
         this.$router.push(this.$route.path.replace(this.lang, targetLang))
       }
-    },
-    created() {
-      this.isTransparent = this.isHome
     },
     mounted() {
       function scroll(fn) {

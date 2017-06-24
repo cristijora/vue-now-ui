@@ -257,7 +257,7 @@
           this.versions = JSON.parse(xhr.responseText)
         }
       }
-      xhr.open('GET', '/versions.json')
+      xhr.open('GET', 'versions.json')
       xhr.send()
     },
     mounted() {

@@ -24,7 +24,8 @@
           th {
             text-align: left;
             border-top: 1px solid #eaeefb;
-            background-color: #EFF2F7;
+            color:#FFFFFF;
+            background-color: #2CA8FF;
             white-space: nowrap;
           }
           td, th {
@@ -75,7 +76,7 @@
       </el-col>
       <el-col :xs="24" :sm="18">
         <router-view class="content"></router-view>
-        <footer-nav></footer-nav>
+        <!--<footer-nav></footer-nav>-->
       </el-col>
     </el-row>
     <transition name="back-top-fade">

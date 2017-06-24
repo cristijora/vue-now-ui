@@ -8,9 +8,7 @@
       "tooltip-text": "Run this demo on jsfiddle.net"
     },
     "header": {
-      "guide": "Guide",
-      "components": "Components",
-      "resource": "Resource"
+      "components": "Component"
     },
     "nav": {
       "dropdown": "Version: "

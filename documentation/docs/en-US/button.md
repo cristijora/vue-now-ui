@@ -43,8 +43,12 @@ We added extra classes that can help you better customise the look. You can use 
 ```html
 <n-button type="primary">Default</n-button>
 <n-button type="primary" round>Round</n-button>
-<n-button type="primary" round><i class="now-ui-icons ui-2_favourite-28"></i> With Icon</n-button>
-<n-button type="primary" round icon icon-mini><i class="now-ui-icons ui-2_favourite-28"></i></n-button>
+<n-button type="primary" round>
+  <i class="now-ui-icons ui-2_favourite-28"></i> With Icon
+</n-button>
+<n-button type="primary" round icon icon-mini>
+  <i class="now-ui-icons ui-2_favourite-28"></i>
+</n-button>
 <n-button type="primary" simple>Simple</n-button>
 ```
 :::

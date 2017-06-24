@@ -1,11 +1,15 @@
 export default{
   name: 'n-navbar',
-  props:{
-    type:{
-      type:String,
-      default:'default'
+  props: {
+    type: {
+      type: String,
+      default: 'default'
     },
-    alignRight:Boolean
+    alignRight: Boolean,
+    styleClasses: {
+      type: String,
+      default: ''
+    }
   },
   data() {
     return {
@@ -25,7 +29,7 @@ export default{
         <a class="navbar-brand">
           {this.$slots.title}
         </a>
-        <div  class={[{'justify-content-end':this.alignRight}, 'collapse navbar-collapse']}>
+        <div class={[{'justify-content-end': this.alignRight}, 'collapse navbar-collapse']}>
           <ul class="navbar-nav">
             {this.$slots.default}
           </ul>
