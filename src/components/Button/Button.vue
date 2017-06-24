@@ -1,10 +1,11 @@
 <script>
   /* eslint-disable no-param-reassign */
 
-  import {propsToClasses} from './utils/index'
+  import {propsToClasses} from './../utils/index'
 
   export default {
     functional: true,
+    name:'n-button',
     props: {
       color: {
         type: String,

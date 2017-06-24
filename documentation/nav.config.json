@@ -1,0 +1,27 @@
+{
+  "en-US": [
+    {
+      "name": "Development",
+      "children": [
+        {
+          "path": "/installation",
+          "name": "Installation"
+        }
+      ]
+    },
+    {
+      "name": "Components",
+      "groups": [
+        {
+          "groupName": "Basic",
+          "list": [
+            {
+              "path": "/button",
+              "title": "Button"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

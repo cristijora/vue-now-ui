@@ -41,7 +41,7 @@
     @if $btn-color == $white-color{
         color: $primary-color;
 
-        &.btn-danger{
+        &.n-button-danger{
             color: $danger-color;
 
             &:hover,
@@ -51,7 +51,7 @@
             }
         }
 
-        &.btn-info{
+        &.n-button-info{
             color: $info-color;
 
             &:hover,
@@ -61,7 +61,7 @@
             }
         }
 
-        &.btn-warning{
+        &.n-button-warning{
             color: $warning-color;
 
             &:hover,
@@ -71,7 +71,7 @@
             }
         }
 
-        &.btn-success{
+        &.n-button-success{
             color: $success-color;
 
             &:hover,
@@ -81,7 +81,7 @@
             }
         }
 
-        &.btn-default{
+        &.n-button-default{
             color: $default-color;
 
             &:hover,
@@ -113,7 +113,7 @@
         color: $white-color;
     }
 
-    &.btn-simple{
+    &.n-button-simple{
         color: $btn-color;
         border-color: $btn-color;
 
@@ -126,7 +126,7 @@
         }
     }
 
-    &.btn-link{
+    &.n-button-link{
         color: $btn-color;
 
         &:hover,
@@ -145,7 +145,7 @@
    border-radius: $border;
    padding: $padding-vertical $padding-horizontal;
 
-   &.btn-simple{
+   &.n-button-simple{
        padding: $padding-vertical - 1 $padding-horizontal - 1;
    }
 

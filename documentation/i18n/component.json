@@ -1,0 +1,19 @@
+[
+  {
+    "lang": "en-US",
+    "demo-block": {
+      "hide-text": "Hide",
+      "show-text": "Expand",
+      "button-text": "Try it!",
+      "tooltip-text": "Run this demo on jsfiddle.net"
+    },
+    "header": {
+      "guide": "Guide",
+      "components": "Components",
+      "resource": "Resource"
+    },
+    "nav": {
+      "dropdown": "Version: "
+    }
+  }
+]

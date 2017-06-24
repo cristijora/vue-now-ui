@@ -5,7 +5,9 @@
   </ul>
 </template>
 <script>
-    export default{}
+    export default{
+      name:'n-dropdown-menu'
+    }
 </script>
 <style>
 </style>

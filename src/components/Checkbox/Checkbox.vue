@@ -8,6 +8,7 @@
 </template>
 <script>
   export default{
+    name:'n-checkbox',
     model: {
       prop: 'checked',
       event: 'change'

@@ -1,4 +1,5 @@
 export default {
+  name:'n-menu-item',
   data() {
     return {
       active: false
@@ -11,7 +12,7 @@ export default {
   },
   render() {
     return (<li class={{'nav-item': true}}>
-      <a class="nav-link" href="#pablo">
+      <a class="nav-link">
         {this.$slots.default}
       </a>
     </li>)

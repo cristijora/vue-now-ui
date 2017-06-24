@@ -1,13 +1,13 @@
 /* eslint-disable no-param-reassign */
 
-import {propsToClasses} from './utils/index'
+import {propsToClasses} from './../utils/index'
 
 export default {
   functional: true,
   props: {
-    color: {
+    type: {
       type: String,
-      default: 'gray'
+      default: 'default'
     },
     size: {
       type: String
@@ -19,15 +19,16 @@ export default {
     simple: Boolean,
     round: Boolean,
     icon: Boolean,
-    iconMini: Boolean
+    iconMini: Boolean,
+    disabled: Boolean
   },
   render(h, {data, props, children}) {
-    let staticClass = `n-button`
-    const boolClasses = propsToClasses('btn', props, ['tag'])
+    let staticClass = ``
+    const boolClasses = propsToClasses('n-button', props, ['tag'])
     staticClass += ` ${boolClasses}`
     data.staticClass = data.staticClass
       ? `${data.staticClass} ${staticClass}`
       : staticClass
-    return <props.tag class={data.staticClass}>{children}</props.tag>
+    return <props.tag class={data.staticClass} disabled={props.disabled}>{children}</props.tag>
   }
 }

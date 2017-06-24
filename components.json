@@ -1,0 +1,4 @@
+{
+  "button": "./src/components/Button/index.js",
+  "navbar": "./src/components/Navbar/index.js"
+}

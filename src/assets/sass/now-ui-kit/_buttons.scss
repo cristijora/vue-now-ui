@@ -1,6 +1,6 @@
 @import "variables";
 @import "mixins";
-.btn{
+.n-button{
     border-width: $border-thick;
     font-weight: $font-weight-normal;
     font-size: $font-size-small;
@@ -24,7 +24,7 @@
          outline: 0 !important;
     }
 
-    &.btn-icon {
+    &.n-button-icon {
         // see above for color variations
         border-radius: 50%;
         font-size: $btn-icon-font-size;
@@ -37,7 +37,7 @@
         position: relative;
         line-height: normal;
 
-        &.btn-simple{
+        &.n-button-simple{
             padding: 0;
 
             i.fa,
@@ -45,7 +45,7 @@
                 line-height: $btn-icon-line-height + 0.2;
             }
 
-            &.btn-icon-mini{
+            &.n-button-icon-mini{
                 i.fa,
                 i.now-ui-icons{
                     line-height: $btn-icon-line-height - 0.2;
@@ -53,7 +53,7 @@
             }
         }
 
-        &.btn-icon-mini{
+        &.n-button-icon-mini{
             height: $btn-icon-size-mini;
             min-width: $btn-icon-size-mini;
             width: $btn-icon-size-mini;
@@ -75,7 +75,7 @@
         }
     }
 
-    &:not(.btn-icon) .now-ui-icons{
+    &:not(.n-button-icon) .now-ui-icons{
         position: relative;
         top: 1px;
     }
@@ -83,38 +83,41 @@
 
 // Apply the mixin to the buttons
 //.btn-default { @include btn-styles($default-color, $default-states-color); }
-.btn-orange { @include btn-styles($primary-color, $primary-states-color); }
-.btn-green { @include btn-styles($success-color, $success-states-color); }
-.btn-blue    { @include btn-styles($info-color, $info-states-color); }
-.btn-yellow { @include btn-styles($warning-color, $warning-states-color); }
-.btn-red  { @include btn-styles($danger-color, $danger-states-color); }
-.btn-neutral { @include btn-styles($white-color, $white-color); }
+.n-button-primary { @include btn-styles($primary-color, $primary-states-color); }
+.n-button-success { @include btn-styles($success-color, $success-states-color); }
+.n-button-info    { @include btn-styles($info-color, $info-states-color); }
+.n-button-warning { @include btn-styles($warning-color, $warning-states-color); }
+.n-button-danger  { @include btn-styles($danger-color, $danger-states-color); }
+.n-button-neutral { @include btn-styles($white-color, $white-color); }
 
-.btn{
+.n-button{
      &:disabled,
      &[disabled],
      &.disabled{
         @include opacity(.5);
     }
 }
-.btn-round{
+.n-button-round{
     border-width: $border-thin;
     border-radius: $btn-round-radius !important;
     padding: $padding-btn-vertical  $padding-round-horizontal;
 
-    &.btn-simple{
+    &.n-button-simple{
         padding: $padding-btn-vertical - 1  $padding-round-horizontal - 1;
     }
 }
-.btn-simple{
+.n-button+.n-button{
+  margin-left:5px;
+}
+.n-button-simple{
     border: $border;
     border-color: $default-color;
     padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
     background-color: $transparent-bg;
 }
 
-.btn-simple,
-.btn-link{
+.n-button-simple,
+.n-button-link{
     &.disabled,
     &:disabled,
     &[disabled],
@@ -130,29 +133,29 @@
     }
 }
 
-.btn-lg{
+.n-button-lg{
    @include btn-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $border-radius-large);
 }
-.btn-sm{
+.n-button-sm{
     @include btn-size($padding-small-vertical, $padding-small-horizontal, $font-size-base, $border-radius-small);
 }
 
-.btn-link{
+.n-button-link{
     border: $none;
     padding: $padding-base-vertical $padding-base-horizontal;
     background-color: $transparent-bg;
 }
 
-.btn-wd {
+.n-button-wd {
     min-width: 140px;
 }
-.btn-group.select{
+.n-button-group.select{
     width: 100%;
 }
-.btn-group.select .btn{
+.n-button-group.select .n-button{
     text-align: left;
 }
-.btn-group.select .caret{
+.n-button-group.select .caret{
     position: absolute;
     top: 50%;
     margin-top: -1px;

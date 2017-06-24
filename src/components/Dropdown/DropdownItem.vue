@@ -1,5 +1,6 @@
 <script>
   export default{
+    name: 'n-dropdown-item',
     functional: true,
     props: {
       tag: {
