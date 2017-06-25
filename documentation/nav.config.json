@@ -18,6 +18,22 @@
             {
               "path": "/button",
               "title": "Button"
+            },
+            {
+              "path": "/checkbox",
+              "title": "Checkbox"
+            },
+            {
+              "path": "/radio",
+              "title": "Radio"
+            },
+            {
+              "path": "/input",
+              "title": "Input"
+            },
+            {
+              "path": "/navbar",
+              "title": "Navbar"
             }
           ]
         }

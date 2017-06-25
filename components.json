@@ -1,4 +1,11 @@
 {
   "button": "./src/components/Button/index.js",
+  "checkbox": "./src/components/Checkbox/index.js",
+  "radio": "./src/components/Radio/index.js",
+  "toggle": "./src/components/Toggle/index.js",
+  "dropdown": "./src/components/Dropdown/index.js",
+  "input": "./src/components/Input/index.js",
+  "pagination": "./src/components/Pagination/index.js",
+  "progress": "./src/components/Progress/index.js",
   "navbar": "./src/components/Navbar/index.js"
 }

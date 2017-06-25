@@ -74,6 +74,7 @@ cooking.add('vueMarkdown', {
       },
 
       render: function(tokens, idx) {
+
         var m = tokens[idx].info.trim().match(/^demo\s*(.*)$/);
         if (tokens[idx].nesting === 1) {
           var description = (m && m.length > 1) ? m[1] : '';
@@ -87,7 +88,7 @@ cooking.add('vueMarkdown', {
             : '';
 
           jsfiddle = md.utils.escapeHtml(JSON.stringify(jsfiddle));
-
+          console.log(descriptionHTML)
           return `<demo-block class="demo-box" :jsfiddle="${jsfiddle}">
                     <div class="source" slot="source">${html}</div>
                     ${descriptionHTML}

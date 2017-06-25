@@ -11,6 +11,7 @@
 </template>
 <script>
   export default{
+    name: 'n-toggle',
     props: {
       label: String,
       value: [Array, Boolean],

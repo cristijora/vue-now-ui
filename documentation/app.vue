@@ -1,6 +1,7 @@
 <style lang="scss" src="bootstrap/dist/css/bootstrap.css"></style>
 <style lang="scss" src="src/assets/sass/now-ui-kit.scss"></style>
 <style src="highlight.js/styles/color-brewer.css"></style>
+<style src="font-awesome/css/font-awesome.css"></style>
 <style lang="scss">
   @import 'assets/styles/common.css';
   @import 'assets/styles/fonts/style.css';

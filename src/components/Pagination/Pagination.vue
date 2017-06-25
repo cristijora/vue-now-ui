@@ -20,6 +20,7 @@
 </template>
 <script>
   export default{
+    name: 'n-pagination',
     props: {
       color: {
         type: String,
@@ -88,7 +89,7 @@
       this.handlePageChange()
     },
     watch: {
-      value: function(newVal, oldVal) {
+      value: function() {
         this.handlePageChange()
       }
     }

@@ -88,50 +88,36 @@
   margin-top: 0;
 }
 
-.checkbox-blue input[type="checkbox"]:checked + label::before {
-  background-color: #428bca;
-  border-color: #428bca;
+@mixin checkbox-style($name,$bg-color,$text-color){
+  .checkbox-#{$name} input[type="checkbox"]:checked + label::before {
+    background-color: $bg-color;
+    border-color: $bg-color;
+  }
+
+  .checkbox-#{$name} input[type="checkbox"]:checked + label::after {
+    color: $text-color;
+  }
 }
 
-.checkbox-blue input[type="checkbox"]:checked + label::after {
-  color: #fff;
+@mixin radio-style($name,$bg-color,$text-color){
+  .radio-#{$name} input[type="radio"]:checked + label::before {
+    background-color: $bg-color;
+    border-color: $bg-color;
+  }
+  .radio-#{$name} input[type="radio"]:checked + label::after{
+    background-color: $text-color;
+    border-color: $text-color;
+  }
 }
 
-.checkbox-red input[type="checkbox"]:checked + label::before {
-  background-color: #d9534f;
-  border-color: #d9534f;
-}
+@include checkbox-style(default,$default-color,white);
+@include checkbox-style(primary,$primary-color,white);
+@include checkbox-style(success,$success-color,white);
+@include checkbox-style(info,$info-color,white);
+@include checkbox-style(warning,$warning-color,white);
+@include checkbox-style(danger,$danger-color,white);
 
-.checkbox-red input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
 
-.checkbox-aqua input[type="checkbox"]:checked + label::before {
-  background-color: #5bc0de;
-  border-color: #5bc0de;
-}
-
-.checkbox-aqua input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
-
-.checkbox-yellow input[type="checkbox"]:checked + label::before {
-  background-color: #f0ad4e;
-  border-color: #f0ad4e;
-}
-
-.checkbox-yellow input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
-
-.checkbox-green input[type="checkbox"]:checked + label::before {
-  background-color: #5cb85c;
-  border-color: #5cb85c;
-}
-
-.checkbox-green input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
 
 .radio label::before,
 .radio label::after{
@@ -182,3 +168,9 @@
 .radio.radio-inline {
   margin-top: 0;
 }
+
+@include radio-style(primary,$primary-color,white);
+@include radio-style(info,$info-color,white);
+@include radio-style(success,$success-color,white);
+@include radio-style(warning,$warning-color,white);
+@include radio-style(danger,$danger-color,white);

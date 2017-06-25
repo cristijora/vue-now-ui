@@ -4,9 +4,8 @@
       <slot>
       </slot>
     </span>
-    <input :type="type" class="form-control"
-           :placeholder=placeholder
-           :value="value"
+    <input class="form-control"
+           v-bind="$props"
            @input="$emit('input', $event.target.value)">
     <span class="input-group-addon" v-if="hasIcon && iconAlign==='right'">
       <slot>
@@ -16,14 +15,16 @@
 </template>
 <script>
   export default{
+    name:'n-input',
     props: {
       value: [String, Number],
       type: {
         type: String,
         default: 'text'
       },
-      noBorder: Boolean,
+      hasBorder: Boolean,
       hasIcon: Boolean,
+      disabled: Boolean,
       iconAlign: {
         type: String,
         default: 'right'
@@ -33,7 +34,7 @@
     computed: {
       styleClasses() {
         let classes = ''
-        if (this.noBorder) {
+        if (!this.hasBorder) {
           classes += `form-group-no-border`
         }
         if (this.hasIcon) {

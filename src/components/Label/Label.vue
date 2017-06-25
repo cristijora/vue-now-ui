@@ -1,8 +1,9 @@
 <script>
-  import {propsToClasses} from './utils/index'
+  import {propsToClasses} from './../utils/index'
 
   export default {
     functional: true,
+    name: 'n-label',
     props: {
       color: {
         type: String,

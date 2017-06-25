@@ -15,6 +15,7 @@
 </template>
 <script>
   export default{
+    name: 'n-progress',
     props: {
       percentage: Number,
       color: {

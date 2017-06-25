@@ -32,6 +32,8 @@
         }
 
         .nav-link{
+            color: $white-color;
+            vertical-align: middle;
             text-transform: uppercase;
             font-size: $font-size-mini;
             padding: $padding-base-vertical $padding-base-horizontal;

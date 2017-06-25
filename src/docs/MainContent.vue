@@ -32,12 +32,6 @@
           </div>
           <div class="col-lg-8 col-md-12">
             <div class="tim-container">
-              <buttons></buttons>
-            </div>
-            <div class="tim-container">
-              <checkboxes></checkboxes>
-            </div>
-            <div class="tim-container">
               <inputs></inputs>
             </div>
             <div class="tim-container">

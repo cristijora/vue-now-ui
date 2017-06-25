@@ -1,19 +1,14 @@
 export default {
-  name:'n-menu-item',
-  data() {
-    return {
-      active: false
-    }
+  functional: true,
+  name: 'n-menu-item',
+  props: {
+    active: Boolean,
+    disabled: Boolean
   },
-  methods: {
-    makeLinkActive() {
-      this.active = !this.active
-    }
-  },
-  render() {
-    return (<li class={{'nav-item': true}}>
-      <a class="nav-link">
-        {this.$slots.default}
+  render(h, {props, children}) {
+    return (<li class={['nav-item', {'active': props.active}]}>
+      <a class={['nav-link', {'disabled': props.disabled}]} href="javascript:void(0)">
+        {children}
       </a>
     </li>)
   }

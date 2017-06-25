@@ -3,7 +3,7 @@ export default{
   props: {
     type: {
       type: String,
-      default: 'default'
+      default: 'white'
     },
     alignRight: Boolean,
     styleClasses: {
@@ -26,7 +26,7 @@ export default{
           <span class="navbar-toggler-bar bar2"></span>
           <span class="navbar-toggler-bar bar3"></span>
         </button>
-        <a class="navbar-brand">
+        <a class="navbar-brand" href="javascript:void(0)">
           {this.$slots.title}
         </a>
         <div class={[{'justify-content-end': this.alignRight}, 'collapse navbar-collapse']}>

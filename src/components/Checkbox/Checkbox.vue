@@ -14,10 +14,9 @@
       event: 'change'
     },
     props: {
-      label: String,
       checked: [Array, Boolean],
       disabled: [Boolean, String],
-      color: {
+      type: {
         type: String,
         default: 'neutral'
       }
@@ -37,8 +36,8 @@
         }
       },
       checkboxType() {
-        if (this.color) {
-          return `checkbox-${this.color}`
+        if (this.type) {
+          return `checkbox-${this.type}`
         }
       }
     },

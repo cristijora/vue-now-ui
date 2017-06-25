@@ -1,6 +1,7 @@
 <template>
-  <div class="n-radio radio">
-    <input :id="cbId" type="radio" :name="name" :checked="model===true" :disabled="disabled" :value="label" v-model="model">
+  <div class="n-radio radio" :class="`radio-${type}`">
+    <input :id="cbId" type="radio" :checked="model===true" :disabled="disabled" :value="label"
+           v-model="model">
     <label :for="cbId">
       <slot></slot>
     </label>
@@ -8,14 +9,18 @@
 </template>
 <script>
   export default{
+    name: 'n-radio',
+    model:{
+      prop:'value',
+      event:'change'
+    },
     props: {
-      label: String,
+      label:[String, Number],
       disabled: [Boolean, String],
       value: [String, Boolean],
-      name: String,
       type: {
         type: String,
-        default: 'default'
+        default: 'neutral'
       }
     },
     data() {
@@ -29,7 +34,7 @@
           return this.value
         },
         set(value) {
-          this.$emit('input', value)
+          this.$emit('change', value)
         }
       }
     },
