@@ -1,11 +1,11 @@
 {
   "name": "now-ui",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A Vue.js project",
   "author": "cristijora <cristian.jora@corebuild.eu>",
   "private": true,
   "scripts": {
-    "build:file": "node build/bin/build-entry.js",
+    "build:file": "node build/bin/build-entry.js & node build/bin/version.js",
     "dev": "npm run build:file && cooking watch -c build/cooking.demo.js -p",
     "start": "node build/dev-server.js",
     "deploy": "npm run build:docs && gh-pages -d documentation/now-ui && del documentation/now-ui",

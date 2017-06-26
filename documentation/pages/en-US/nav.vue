@@ -141,7 +141,6 @@
     },
     watch: {
       showDialog(val) {
-        document.body.style.overflow = val ? 'hidden' : ''
       }
     },
     methods: {

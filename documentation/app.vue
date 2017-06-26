@@ -140,11 +140,11 @@
 
 <template>
   <div id="app">
-    <main-header v-if="lang !== 'play'"></main-header>
+    <main-header></main-header>
     <div class="main-cnt">
       <router-view></router-view>
     </div>
-    <main-footer v-if="lang !== 'play'"></main-footer>
+    <main-footer></main-footer>
   </div>
 </template>
 
@@ -154,7 +154,7 @@
 
     computed: {
       lang() {
-        return this.$route.path.split('/')[1] || 'zh-CN'
+        return 'en-US'
       }
     },
     methods: {
@@ -181,22 +181,7 @@
           }, 50)
         }
       }
-    },
-
-    mounted() {
-      this.renderAnchorHref()
-      this.goAnchor()
-    },
-
-    created() {
-      window.addEventListener('hashchange', () => {
-        if (location.href.match(/#/g).length < 2) {
-          document.documentElement.scrollTop = document.body.scrollTop = 0
-          this.renderAnchorHref()
-        } else {
-          this.goAnchor()
-        }
-      })
     }
+
   }
 </script>

@@ -94,7 +94,6 @@
 </template>
 <script>
   import navsData from '../../nav.config.json'
-  import throttle from 'throttle-debounce/throttle'
   export default {
     data() {
       return {
@@ -114,13 +113,6 @@
       handleScroll() {
         this.showBackToTop = (document.body.scrollTop || document.documentElement.scrollTop) >= 0.5 * document.body.clientHeight
       }
-    },
-    mounted() {
-      this.throttledScrollHandler = throttle(300, this.handleScroll)
-      document.addEventListener('scroll', this.throttledScrollHandler)
-    },
-    beforeDestroy() {
-      document.removeEventListener('scroll', this.throttledScrollHandler)
     }
   }
 </script>

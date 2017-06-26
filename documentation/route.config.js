@@ -76,51 +76,21 @@ const registerRoute = (navConfig) => {
 let route = registerRoute(navConfig)
 
 const generateMiscRoutes = function(lang) {
-  let guideRoute = {
-    path: `/${lang}/guide`, // 指南
-    redirect: `/${lang}/guide/design`,
-    component: load(lang, 'guide'),
-    children: [{
-      path: 'design', // 设计原则
-      name: 'guide-design' + lang,
-      meta: { lang },
-      component: load(lang, 'design')
-    }, {
-      path: 'nav', // 导航
-      name: 'guide-nav' + lang,
-      meta: { lang },
-      component: load(lang, 'nav')
-    }]
-  }
-
-  let resourceRoute = {
-    path: `/${lang}/resource`, // 资源
-    meta: { lang },
-    name: 'resource' + lang,
-    component: load(lang, 'resource')
-  }
-
   let indexRoute = {
-    path: `/${lang}`, // 首页
+    path: `/${lang}/`,
     meta: { lang },
     name: 'home' + lang,
     component: load(lang, 'index')
   }
 
-  return [guideRoute, resourceRoute, indexRoute]
+  return [indexRoute]
 }
 
 langs.forEach(lang => {
   route = route.concat(generateMiscRoutes(lang.lang))
 })
 
-route.push({
-  path: '/play',
-  name: 'play',
-  component: require('./play/index.vue')
-})
-
-let defaultPath = '/en-US'
+let defaultPath = '/en-US/'
 
 route = route.concat([{
   path: '/',

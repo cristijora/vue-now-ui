@@ -132,7 +132,6 @@
           v-if="item.path"
           active-class="active"
           :to="base + item.path"
-          exact
           v-text="item.title || item.name">
         </router-link>
         <ul class="pure-menu-list sub-nav" v-if="item.children">
@@ -141,7 +140,6 @@
               class=""
               active-class="active"
               :to="base + navItem.path"
-              exact
               v-text="navItem.title || navItem.name">
             </router-link>
           </li>
@@ -157,7 +155,6 @@
                 <router-link
                   active-class="active"
                   :to="base + navItem.path"
-                  exact
                   v-text="navItem.title"></router-link>
               </li>
             </ul>
@@ -191,7 +188,7 @@
     },
     watch: {
       '$route.path'() {
-        this.handlePathChange()
+//        this.handlePathChange()
       }
     },
     computed: {
@@ -212,7 +209,6 @@
       },
       handleResize() {
         this.isSmallScreen = document.documentElement.clientWidth < 768
-        this.handlePathChange()
       },
       handlePathChange() {
         if (!this.isSmallScreen) {
@@ -261,11 +257,9 @@
       xhr.send()
     },
     mounted() {
-      this.handleResize()
-      window.addEventListener('resize', this.handleResize)
+
     },
     beforeDestroy() {
-      window.removeEventListener('resize', this.handleResize)
     }
   }
 </script>

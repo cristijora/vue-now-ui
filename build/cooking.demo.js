@@ -88,7 +88,6 @@ cooking.add('vueMarkdown', {
             : '';
 
           jsfiddle = md.utils.escapeHtml(JSON.stringify(jsfiddle));
-          console.log(descriptionHTML)
           return `<demo-block class="demo-box" :jsfiddle="${jsfiddle}">
                     <div class="source" slot="source">${html}</div>
                     ${descriptionHTML}
