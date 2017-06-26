@@ -12,8 +12,8 @@ langConfig.forEach(lang => {
   }
 
   Object.keys(lang.pages).forEach(page => {
-    var templatePath = path.resolve(__dirname, `../../examples/pages/template/${page}.tpl`)
-    var outputPath = path.resolve(__dirname, `../../examples/pages/${lang.lang}/${page}.vue`)
+    var templatePath = path.resolve(__dirname, `../../documentation/pages/template/${page}.tpl`)
+    var outputPath = path.resolve(__dirname, `../../documentation/pages/${lang.lang}/${page}.vue`)
     var content = fs.readFileSync(templatePath, 'utf8');
     var pairs = lang.pages[page];
 

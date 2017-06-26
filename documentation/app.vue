@@ -139,7 +139,7 @@
 
 
 <template>
-  <div id="app">
+  <div>
     <main-header></main-header>
     <div class="main-cnt">
       <router-view></router-view>

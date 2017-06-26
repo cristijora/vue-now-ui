@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Element from 'element-ui'
-import entry from './app'
+import App from './app'
 import VueRouter from 'vue-router'
 import routes from './route.config'
 import NowUI from 'src/index.js'
@@ -22,6 +22,7 @@ const router = new VueRouter({
 })
 
 new Vue({ // eslint-disable-line
-  render: h => h(entry),
+  el: '#app',
+  render: h => h(App),
   router
-}).$mount('#app')
+})

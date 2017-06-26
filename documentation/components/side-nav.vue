@@ -188,7 +188,7 @@
     },
     watch: {
       '$route.path'() {
-//        this.handlePathChange()
+        this.handlePathChange()
       }
     },
     computed: {
@@ -257,9 +257,11 @@
       xhr.send()
     },
     mounted() {
-
+      this.handleResize()
+      window.addEventListener('resize', this.handleResize)
     },
     beforeDestroy() {
+      window.removeEventListener('resize', this.handleResize)
     }
   }
 </script>
