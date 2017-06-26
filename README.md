@@ -2,7 +2,7 @@
 
 > Vue components for now-ui 
 Work in progress
-
+## [Roadmap & Progress](https://github.com/cristijora/vue-now-ui/projects/1)
 ## Build Setup
 
 ``` bash
