@@ -46,7 +46,7 @@
         }
     }
 
-    .has-danger &{
+    .has-error &{
         background-color: lighten($danger-color, 30%);
         border-color: lighten($danger-color, 30%);
         color: $danger-color;
@@ -77,7 +77,7 @@
 }
 
 .has-success,
-.has-danger{
+.has-error{
     &:after{
         font-family: 'Nucleo Outline';
         content: "\ecf0";
@@ -97,7 +97,7 @@
     }
 }
 
-.has-danger{
+.has-error{
     &:after{
         content: "\ed2b";
         color: $danger-color;
@@ -156,10 +156,10 @@
     @include transition-input-focus-color();
 
     .has-success &,
-    .has-danger &{
+    .has-error &{
         background-color: $white-color;
     }
-    .has-danger .form-control:focus + &{
+    .has-error .form-control:focus + &{
         color: $danger-color;
     }
     .has-success .form-control:focus + &{
@@ -242,7 +242,7 @@ textarea.form-control{
 }
 
 .has-success,
-.has-danger{
+.has-error{
 
     &.form-group .form-control,
     &.form-group.form-group-no-border .form-control{

@@ -55,6 +55,12 @@ cooking.add('loader.md', {
   loader: 'vue-markdown-loader'
 });
 
+cooking.add('font-loader', {
+  test: /\.(eot|svg|ttf|woff|woff2)$/,
+  loader: 'url-loader',
+  name: './fonts/[name].[ext]'
+});
+
 cooking.add(
   'output.chunkFilename',
   isProd ? '[name].[chunkhash:7].js' : '[name].js'

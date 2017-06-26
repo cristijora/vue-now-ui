@@ -8,6 +8,7 @@ import Dropdown from '../src/components/dropdown/index.js'
 import Input from '../src/components/input/index.js'
 import Pagination from '../src/components/pagination/index.js'
 import Progress from '../src/components/progress/index.js'
+import Label from '../src/components/label/index.js'
 import Navbar from '../src/components/navbar/index.js'
 const plugins = [
   Button,
@@ -18,6 +19,7 @@ const plugins = [
   Input,
   Pagination,
   Progress,
+  Label,
   Navbar
 ]
 const install = function(Vue, opts = {}) {
@@ -45,5 +47,6 @@ export default {
   Input,
   Pagination,
   Progress,
+  Label,
   Navbar
 }

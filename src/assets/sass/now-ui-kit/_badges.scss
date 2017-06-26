@@ -18,22 +18,22 @@
        font-size: 0.8em;
     }
 }
-.badge-gray{
+.badge-default{
     @include badge-color($default-color);
 }
-.badge-orange{
+.badge-primary{
     @include badge-color($primary-color);
 }
-.badge-blue{
+.badge-info{
     @include badge-color($info-color);
 }
-.badge-green{
+.badge-success{
     @include badge-color($success-color);
 }
-.badge-yellow{
+.badge-warning{
     @include badge-color($warning-color);
 }
-.badge-red{
+.badge-danger{
     @include badge-color($danger-color);
 }
 .badge-neutral{

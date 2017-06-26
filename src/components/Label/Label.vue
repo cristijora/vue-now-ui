@@ -5,9 +5,9 @@
     functional: true,
     name: 'n-label',
     props: {
-      color: {
+      type: {
         type: String,
-        default: 'gray'
+        default: 'default'
       },
       tag: {
         type: String,

@@ -29,7 +29,8 @@
         type: String,
         default: 'right'
       },
-      placeholder: String
+      placeholder: String,
+      required: Boolean
     },
     computed: {
       styleClasses() {

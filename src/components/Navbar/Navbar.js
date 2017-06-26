@@ -9,16 +9,25 @@ export default{
     styleClasses: {
       type: String,
       default: ''
+    },
+    colorOnScroll: {
+      type: Number,
+      default: 0,
+      validator: (value) => {
+        return value >= 0
+      }
     }
   },
   data() {
     return {
       currentActiveIndex: 1,
-      currentActiveLink: ''
+      currentActiveLink: '',
+      isTransparent: true
     }
   },
   render() {
-    return (<nav class={[`navbar navbar-toggleable-md bg-${this.$props.type}`]}>
+    let extraClass = this.colorOnScroll > 0 && this.isTransparent ? 'navbar-transparent' : `bg-${this.type}`
+    return (<nav class={[`navbar navbar-toggleable-md ${extraClass}`]}>
       <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 aria-controls="navigation-index" aria-expanded="true" aria-label="Toggle navigation">
@@ -36,5 +45,20 @@ export default{
         </div>
       </div>
     </nav>)
+  },
+  mounted() {
+    function scroll(fn) {
+      window.addEventListener('scroll', () => {
+        fn()
+      }, false)
+    }
+
+    scroll(() => {
+      if (document.documentElement.scrollTop > this.colorOnScroll || document.body.scrollTop > this.colorOnScroll) {
+        this.isTransparent = false
+      } else {
+        this.isTransparent = true
+      }
+    })
   }
 }

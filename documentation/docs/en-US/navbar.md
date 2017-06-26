@@ -13,11 +13,12 @@
   };
 </script>
 
-## Radio buttons
+## Pagination
 
 ### Basic
+Ever wanted to have pagination with just a v-model ?
 
-::: demo Simple white navbar
+::: demo Simple pagination
 
 ```html
 <n-navbar>
@@ -31,6 +32,15 @@
 
 ### Colors
 
+You can specify the color of your navbar through the `type` prop.
+
+You can also color the navbar only after scrolling certain amount of pixels through `color-on-scroll` prop
+Specify `color-on-scrol="500"` for example and your navbar will be transparent until you reach 500 pixels from page top.
+See 
+<template>
+ <router-link to="/">main page </router-link>
+</template>
+as a reference 
 ::: demo Handle navbar color throw `type` prop
 
 ```html
@@ -71,7 +81,8 @@
 ### Navbar attributes
 | Attribute      | Description    | Type      | Accepted values       | Default   |
 |---------- |-------- |---------- |--------------------  |----- |
-| type     | navbar type (colors)   | string  |   white/primary/info/success/warning/danger           |    white     |
+| type     | navbar type (colors)   | string  |   white/primary/info/success/ warning/danger           |    white     |
+| color-on-scroll     | colors the navbar at the specified pixel value   | number  |   number > 0     |    0     |
 
 ### MenuItem attributes
 | Attribute      | Description    | Type      | Accepted values       | Default   |

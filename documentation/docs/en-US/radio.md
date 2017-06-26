@@ -82,7 +82,7 @@ Check each radio to see how the color of the radio button change when it's activ
 ### Attributes
 | Attribute      | Description    | Type      | Accepted values       | Default   |
 |---------- |-------- |---------- |--------------------  |----- |
-| type     | radio type (colors)   | string  |   neutral/primary/info/success/warning/danger           |    neutral     |
+| type     | radio type (colors)   | string  |   neutral/primary/info/success/ warning/danger           |    neutral     |
 | disabled  | disable the radio    | boolean/string   | —   |  —  |
 | label | Value of each radio button |  | string/number | — |
 

@@ -94,7 +94,7 @@ Same as buttons, checkboxes can have different colors depending on their `type` 
 ### Attributes
 | Attribute      | Description    | Type      | Accepted values       | Default   |
 |---------- |-------- |---------- |--------------------  |----- |
-| type     | checkbox type (colors)   | string  |   neutral/primary/info/success/warning/danger           |    neutral     |
+| type     | checkbox type (colors)   | string  |   neutral/primary/info/success/ warning/danger           |    neutral     |
 | disabled  | disable the checkbox    | boolean   | —   | false   |
 | checked |  | determines the state of the checkbox (part of v-model) | boolean | false |
 

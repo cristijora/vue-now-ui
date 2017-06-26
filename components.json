@@ -7,5 +7,6 @@
   "input": "./src/components/Input/index.js",
   "pagination": "./src/components/Pagination/index.js",
   "progress": "./src/components/Progress/index.js",
+  "label": "./src/components/Label/index.js",
   "navbar": "./src/components/Navbar/index.js"
 }

@@ -59,7 +59,7 @@ We added extra classes that can help you better customise the look. You can use 
 | Attribute      | Description    | Type      | Accepted values       | Default   |
 |---------- |-------- |---------- |--------------------  |----- |
 | size     | button size   | string  |   lg/sm            |    —     |
-| type     | button type   | string    | default/primary/success/warning/danger/info/neutral |     —    |
+| type     | button type   | string    | default/primary/success/warning/ danger/info/neutral |     —    |
 | simple     | determine whether it's a plain button   | Boolean    | — | false   |
 | round     | makes the button round  | boolean    | — | false   |
 | disabled  | disable the button    | boolean   | —   | false   |

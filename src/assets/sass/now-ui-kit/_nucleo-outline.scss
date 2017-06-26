@@ -8,8 +8,11 @@ Created using IcoMoon - icomoon.io
 
 @font-face {
   font-family: 'Nucleo Outline';
-  src: url('../fonts/nucleo-outline.woff2') format('woff2'),
-    url('../fonts/nucleo-outline.woff') format('woff');
+  src: url('nucleo-outline.eot');
+  src: url('nucleo-outline.eot') format('embedded-opentype'),
+  url('nucleo-outline.woff2') format('woff2'),
+  url('nucleo-outline.woff') format('woff'),
+  url('nucleo-outline.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
