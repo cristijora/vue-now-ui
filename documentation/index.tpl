@@ -7,7 +7,7 @@
   </head>
   <body>
     <div id="app"></div><% if (process.env.NODE_ENV === 'production') { %>
-    <script src="https://unpkg.com/vue@2.3.4"></script>
+    <script src="https://unpkg.com/vue@2.3.0"></script>
     <script src="https://unpkg.com/vue-router@2.6.0"></script><% } %>
   </body>
 </html>
