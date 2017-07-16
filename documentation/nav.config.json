@@ -28,6 +28,14 @@
               "title": "Radio"
             },
             {
+              "path": "/toggle",
+              "title": "Toggle"
+            },
+            {
+              "path": "/dropdown",
+              "title": "Dropdown"
+            },
+            {
               "path": "/input",
               "title": "Input"
             },

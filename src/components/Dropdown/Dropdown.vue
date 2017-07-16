@@ -1,26 +1,40 @@
 <template>
-  <div class="dropdown" :class="{show:show}">
-    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" @click="toggleDropdown">
-      <slot></slot>
+  <div class="dropdown" :class="{show:isOpen}" @click="toggleDropDown">
+    <a
+       :class="{'n-button n-button-default dropdown-toggle': !$slots.title}"
+       data-toggle="dropdown"
+       href="javascript:void(0)">
+      <slot name="title">
+          {{title}}
+      </slot>
     </a>
-    <slot name="dropdown-menu">
-    </slot>
+    <ul class="dropdown-menu">
+      <slot></slot>
+    </ul>
   </div>
 </template>
 <script>
   export default{
     name: 'n-dropdown',
+    props: {
+      title: String,
+      icon: String
+    },
     data() {
       return {
-        show: false
+        isOpen: false
       }
     },
     methods: {
-      toggleDropdown() {
-        this.show = !this.show
+      toggleDropDown() {
+        this.isOpen = !this.isOpen
+      },
+      closeDropDown() {
+        this.isOpen = false
       }
     }
   }
 </script>
+
 <style lang="scss" src="@sass/now-ui-kit/_dropdown.scss">
 </style>

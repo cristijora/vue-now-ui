@@ -93,7 +93,9 @@
     background-color: $bg-color;
     border-color: $bg-color;
   }
-
+  .checkbox-#{$name} input[type="checkbox"] + label::before{
+    border: 1px solid $bg-color;
+  }
   .checkbox-#{$name} input[type="checkbox"]:checked + label::after {
     color: $text-color;
   }
