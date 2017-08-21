@@ -54,6 +54,10 @@
             {
               "path": "/icon",
               "title": "Icons"
+            },
+            {
+              "path": "/alert",
+              "title": "Alert"
             }
           ]
         }
