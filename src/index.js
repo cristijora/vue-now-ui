@@ -10,6 +10,7 @@ import Pagination from '../src/components/pagination/index.js'
 import Progress from '../src/components/progress/index.js'
 import Label from '../src/components/label/index.js'
 import Navbar from '../src/components/navbar/index.js'
+import Icon from '../src/components/icon/index.js'
 const plugins = [
   Button,
   Checkbox,
@@ -20,7 +21,8 @@ const plugins = [
   Pagination,
   Progress,
   Label,
-  Navbar
+  Navbar,
+  Icon
 ]
 const install = function(Vue, opts = {}) {
   /* istanbul ignore if */
@@ -48,5 +50,6 @@ export default {
   Pagination,
   Progress,
   Label,
-  Navbar
+  Navbar,
+  Icon
 }
