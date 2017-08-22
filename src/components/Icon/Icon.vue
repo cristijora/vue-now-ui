@@ -21,7 +21,7 @@
       }
     },
     computed: {
-      iconSize () {
+      iconSize() {
         return { 'font-size': this.size }
       }
     }
