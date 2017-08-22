@@ -101,12 +101,12 @@
     "transliteration": "^1.6.2",
     "uppercamelcase": "^3.0.0",
     "url-loader": "^0.5.8",
-    "vue": "2.3.3",
+    "vue": "^2.4.2",
     "vue-loader": "^11.3.4",
     "vue-markdown-loader": "^1.0.0",
     "vue-router": "^2.6.0",
     "vue-style-loader": "^2.0.5",
-    "vue-template-compiler": "^2.2.6",
+    "vue-template-compiler": "^2.4.2",
     "vue-template-es2015-compiler": "^1.5.2",
     "webpack": "^2.3.3",
     "webpack-bundle-analyzer": "^2.2.1",
@@ -124,5 +124,10 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "dependencies": {
+    "html-loader": "^0.4.3",
+    "postcss-loader": "^2.0.6",
+    "style-loader": "^0.13.1"
+  }
 }

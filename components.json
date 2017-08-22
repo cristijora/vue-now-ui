@@ -8,5 +8,8 @@
   "pagination": "./src/components/Pagination/index.js",
   "progress": "./src/components/Progress/index.js",
   "label": "./src/components/Label/index.js",
-  "navbar": "./src/components/Navbar/index.js"
+  "navbar": "./src/components/Navbar/index.js",
+  "icon": "./src/components/Icon/index.js",
+  "alert": "./src/components/Alert/index.js",
+  "modal": "./src/components/Modal/index.js"
 }
