@@ -1,3 +1,0 @@
-## Slider
-
-Cooming soon... 
