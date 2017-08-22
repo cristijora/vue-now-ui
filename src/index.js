@@ -13,6 +13,7 @@ import Navbar from '../src/components/navbar/index.js'
 import Icon from '../src/components/icon/index.js'
 import Alert from '../src/components/alert/index.js'
 import Modal from '../src/components/modal/index.js'
+import Tabs from '../src/components/tabs/index.js'
 const plugins = [
   Button,
   Checkbox,
@@ -26,7 +27,8 @@ const plugins = [
   Navbar,
   Icon,
   Alert,
-  Modal
+  Modal,
+  Tabs
 ]
 const install = function(Vue, opts = {}) {
   /* istanbul ignore if */
@@ -57,5 +59,6 @@ export default {
   Navbar,
   Icon,
   Alert,
-  Modal
+  Modal,
+  Tabs
 }

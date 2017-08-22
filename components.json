@@ -11,5 +11,6 @@
   "navbar": "./src/components/Navbar/index.js",
   "icon": "./src/components/Icon/index.js",
   "alert": "./src/components/Alert/index.js",
-  "modal": "./src/components/Modal/index.js"
+  "modal": "./src/components/Modal/index.js",
+  "tabs": "./src/components/Tabs/index.js"
 }
