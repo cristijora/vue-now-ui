@@ -52,14 +52,6 @@
               "title": "Pagination"
             },
             {
-              "path": "/icon",
-              "title": "Icons"
-            },
-            {
-              "path": "/alert",
-              "title": "Alert"
-            },
-            {
               "path": "/tabs",
               "title": "Tabs"
             }
