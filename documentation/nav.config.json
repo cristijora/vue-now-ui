@@ -62,6 +62,10 @@
             {
               "path": "/modal",
               "title": "Modal"
+            },
+            {
+              "path": "/tabs",
+              "title": "Tabs"
             }
           ]
         }
