@@ -1,6 +1,5 @@
 <template>
-  <i v-if="!spin" class="n-icon now-ui-icons" :class="name" :style="iconSize"></i>
-  <i v-else class="spin n-icon now-ui-icons" :class="name" :style="iconSize"></i>
+  <i class="n-icon now-ui-icons" :class="[name, {spin: spin}]" :style="iconSize"></i>
 </template>
 <script>
   export default {

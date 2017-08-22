@@ -21,12 +21,12 @@
 ```
 :::
 
-### With descprtion
+### With header background
 
 ::: demo Tabs with background on card
 
 ```html
-<n-tabs background="#e95e38">
+<n-tabs background="#e95e38" centered>
   <n-tab-item label="Config">
     Config
   </n-tab-item>
@@ -43,3 +43,4 @@
 |---------- |-------- |---------- |--------------------  |----- |
 | label     | tab label   | string required |        —       |    —     |
 | background     | tabs background color   | string (hex o rgb color)    |  #fff |    
+| centered     | centers tabs inside tab-header   | boolean    |  false |    

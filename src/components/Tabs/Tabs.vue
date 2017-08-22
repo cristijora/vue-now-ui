@@ -1,9 +1,14 @@
 <template>
   <div class="card">
-    <ul class="nav nav-tabs" :class="{ 'nav-tabs-neutral': tabsHaveBackground }" :style="tabsBackroundColor">
+    <ul class="nav nav-tabs"
+        :class="{ 'nav-tabs-neutral': tabsHaveBackground, 'justify-content-center':centered}"
+        :style="tabsBackroundColor">
       <li v-for="(label, index) in labelList" class="nav-item">
-        <a @click="changeTab(index)" class="nav-link" :class="{ 'active': index === activeIndex }">
-        {{ label }} 
+        <a @click="changeTab(index)"
+           href="javascript:void(0)"
+           class="nav-link"
+           :class="{ 'active': index === activeIndex }">
+          {{ label }}
         </a>
       </li>
     </ul>
@@ -18,7 +23,10 @@
 <script>
   export default {
     name: 'n-tabs',
-    props: ['background'],
+    props: {
+      background: String,
+      centered: Boolean
+    },
     data() {
       return {
         labelList: [],
@@ -31,10 +39,10 @@
         return this.$children.index === this.activeIndex
       },
       tabsHaveBackground() {
-        return this.backround
+        return this.background !== undefined
       },
       tabsBackroundColor() {
-        return { 'background-color': this.background }
+        return {'background-color': this.background}
       }
     },
     methods: {
