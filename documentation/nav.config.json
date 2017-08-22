@@ -58,6 +58,10 @@
             {
               "path": "/alert",
               "title": "Alert"
+            },
+            {
+              "path": "/modal",
+              "title": "Modal"
             }
           ]
         }
