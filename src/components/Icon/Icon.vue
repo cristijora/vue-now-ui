@@ -1,11 +1,6 @@
-<style>
-  .n-icon.now-ui-icons  {
-    font-size: 20px
-  }
-</style>
 <template>
-  <i v-if="!spin" class="n-icon now-ui-icons" :class="name"></i>
-  <i v-else class="spin n-icon now-ui-icons" :class="name"></i>
+  <i v-if="!spin" class="n-icon now-ui-icons" :class="name" :style="iconSize"></i>
+  <i v-else class="spin n-icon now-ui-icons" :class="name" :style="iconSize"></i>
 </template>
 <script>
   export default {
@@ -17,6 +12,7 @@
       },
       size: {
         type: String,
+        default: '25px',
         required: false
       },
       spin: {
@@ -24,7 +20,10 @@
         default: false
       }
     },
-    mounted() {
+    computed: {
+      iconSize () {
+        return { 'font-size': this.size }
+      }
     }
   }
 </script>

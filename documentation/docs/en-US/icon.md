@@ -16,13 +16,34 @@ Now UI Kit comes with 100 custom icons made by  NucleoApp. The official package 
 
 ### Usage Example
 
-::: demo Icon defined by `name` attribute. with `spin` attibute you can set the icon spin
+::: demo Icon defined by `name` attribute.
 
 ```html
 <n-icon name="files_box"></n-icon>
+<n-icon name="loader_gear"></n-icon>
+```
+:::
+
+
+### Spin icon
+
+::: demo with `spin` attibute you can set the icon spin
+
+```html
 <n-icon name="loader_gear" spin></n-icon>
 ```
 :::
+
+### Custom size
+
+::: demo You can set custom size with `size` attribute, default size is `25px` 
+
+```html
+<n-icon name="files_box" size="60px"></n-icon>
+<n-icon name="loader_gear" size="2em" spin></n-icon>
+```
+:::
+
 
 ### Attributes
 | Attribute      | Description    | Type      | Accepted values       | Default   |
